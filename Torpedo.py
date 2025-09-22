@@ -1,6 +1,22 @@
 from tkinter import *
 from tkinter import ttk
 
+def palya_generalas(palya_dict):
+    palya = []
+    for state in palya_dict.values():
+        if state == 0:
+            palya.append("0")
+        if state == 1:
+            palya.append("X")
+        if state == 2:
+            palya.append("°")
+    return palya
+
+def tamad():
+    tamad = tamad_var.get()
+    palya_dict[tamad] = 1
+    palya_generalas(palya_dict)
+play_again = True
 label = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
 
 palya_dict = {"A1": 0, "B1": 0, "C1": 0, "D1": 0, "E1": 0, "F1": 0, "G1": 0, "H1": 0, "I1": 0, "J1": 0,
@@ -14,20 +30,13 @@ palya_dict = {"A1": 0, "B1": 0, "C1": 0, "D1": 0, "E1": 0, "F1": 0, "G1": 0, "H1
               "A9": 0, "B9": 0, "C9": 0, "D9": 0, "E9": 0, "F9": 0, "G9": 0, "H9": 0, "I9": 0, "J9": 0,
               "A10": 0, "B10": 0, "C10": 0, "D10": 0, "E10": 0, "F10": 0, "G10": 0, "H10": 0, "I10": 0, "J10": 0}
 
-palya = []
-for state in palya_dict.values():
-    if state == 0:
-        palya.append("0")
-    if state == 1:
-        palya.append("X")
-    if state == 2:
-        palya.append("o")
-        
+palya = palya_generalas(palya_dict)
+            
 counter = 0
-
 
 root = Tk(className="Torpedó")
 root.geometry("720x720")
+tamad_var= StringVar()
 frm = ttk.Frame(root, padding=10)
 frm.grid()
 
@@ -38,4 +47,10 @@ for i in range(10):
     for j in range(10):
         ttk.Label(frm, text=palya[counter]).grid(column=1+j, row=1+i)
         counter += 1
+
+tamad_label = ttk.Label(root, text = 'Melyik mezőt támadja meg?', font=('calibre',10, 'bold')).grid(row=11, column=0)
+tamad_entry = ttk.Entry(root,textvariable = tamad_var, font=('calibre',10,'normal')).grid(row=11, column=1)
+
+sub_btn=ttk.Button(root,text = 'Támad', command = tamad).grid(row=12, column=2)
+
 root.mainloop()
