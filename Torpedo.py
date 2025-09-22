@@ -15,8 +15,18 @@ def palya_generalas(palya_dict):
 def tamad():
     tamad = tamad_var.get()
     palya_dict[tamad] = 1
-    palya_generalas(palya_dict)
-play_again = True
+    palya = palya_generalas(palya_dict)
+                
+    counter = 0
+    for i in range(10):
+        ttk.Label(frm, text=label[i]).grid(column=i+1, row=0)
+        ttk.Label(frm, text=i+1).grid(column=0, row=i+1)
+        for j in range(10):
+            ttk.Label(frm, text=palya[counter]).grid(column=1+j, row=1+i)
+            counter += 1
+
+    root.update()
+
 label = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
 
 palya_dict = {"A1": 0, "B1": 0, "C1": 0, "D1": 0, "E1": 0, "F1": 0, "G1": 0, "H1": 0, "I1": 0, "J1": 0,
