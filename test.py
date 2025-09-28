@@ -22,18 +22,13 @@ hajo_dict = {"A1": 0, "B1": 0, "C1": 0, "D1": 0, "E1": 0, "F1": 0, "G1": 0, "H1"
               "A9": 0, "B9": 0, "C9": 0, "D9": 0, "E9": 0, "F9": 0, "G9": 0, "H9": 0, "I9": 0, "J9": 0,
               "A10": 0, "B10": 0, "C10": 0, "D10": 0, "E10": 0, "F10": 0, "G10": 0, "H10": 0, "I10": 0, "J10": 0}
 
-x = random.randint(0, 100)
-z = 1
-print(x, z)
-
-def hajogeneralas(x):
-    counter = 0
-    for i in hajo_dict.keys():            
-        if counter >= x and counter < x + 4:
-            hajo_dict[i] = 1
-        counter += 1
-    return hajo_dict
+#random szám ami a helyet mutatja, aztán utánna lévő helyeken hajó lesz
 
 
-hajo_dict = hajogeneralas(x)
-print(hajo_dict.values())
+""" 1db 5 hely
+    1db 4 hely
+    2db 3 hely
+    1db 2 hely
+"""
+hajo = random.randint(1, 100)
+

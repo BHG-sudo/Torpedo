@@ -1,15 +1,15 @@
 from tkinter import *
 from tkinter import ttk
 
-def palya_generalas(palya_dict, hajo_dict):
+def palya_generalas(palya_dict: dict, hajo_dict: dict):
     palya = []
-    for state in palya_dict.values():
-        if state == 0 and hajo_dict[state] == 0:
+    for cell ,state in palya_dict.items():
+        if state == 0 and hajo_dict.get(cell) == 0:
             palya.append("0")
-        if state == 1 and hajo_dict[state] == 1:
+        if state == 1 and hajo_dict.get(cell) == 1:
             palya.append("X")
-        if state == 2 and hajo_dict[state] == 0:
-            palya.append("°")
+        if state == 1 and hajo_dict.get(cell) == 0:
+            palya.append("#")
     return palya
 
 def tamad():
@@ -51,9 +51,10 @@ hajo_dict = {"A1": 0, "B1": 0, "C1": 0, "D1": 0, "E1": 0, "F1": 0, "G1": 0, "H1"
               "A9": 0, "B9": 0, "C9": 0, "D9": 0, "E9": 0, "F9": 0, "G9": 0, "H9": 0, "I9": 0, "J9": 0,
               "A10": 0, "B10": 0, "C10": 0, "D10": 0, "E10": 0, "F10": 0, "G10": 0, "H10": 0, "I10": 0, "J10": 0}
 
-palya = palya_generalas(palya_dict,hajo_dict)
-            
+palya = palya_generalas(palya_dict, hajo_dict)
+
 counter = 0
+
 
 root = Tk(className="Torpedó")
 root.geometry("720x720")
