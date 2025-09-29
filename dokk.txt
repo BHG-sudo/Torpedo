@@ -1,9 +1,0 @@
-PYTHON TORPEDÓ
-Csapat: Significant Others
-•	csapattagok: Balázs- Hegedüs Géza, Bereczki Ferenc
-•	Projekt célja: Pythonban működtetett Torpedó játék külső grafikus oldalon
-•	Kivitelezés: Visual Studio Code, Python programozási nyelv
-
-Teljes projekt leírása: A projekt keretin belül a cél, hogy létrejöjjön, működjön és használható állapotba legyen. 
-A projekt teljesen meg akarja alkotni a klasszikus Torpedó élményt. Az alkotási folyamat során a fő programozást: Balázs- Hegedüs Géza készítette,
- a dokumentációt és grafikus dizájnt: Bereczki Ferenc.
