@@ -2,7 +2,6 @@ from tkinter import *
 from tkinter import ttk
 import time
 
-
 def nyertel():
     root = Tk()
     root.title("Torpedo")
@@ -29,13 +28,12 @@ def palya_generalas(palya_dict: dict, hajo_dict: dict):
 
 def tamad():
     tamad = tamad_var.get()
-    palya_dict[tamad] = 1
+    palya_dict[tamad.capitalize()] = 1
     palya = palya_generalas(palya_dict, hajo_dict)
     kilott_szam = palya.count("#")
     if kilott_szam == 17:
         nyertel()
         root.destroy()
-    
     counter = 0
     for i in range(10):
         ttk.Label(frm, text=label[i]).grid(column=i+1, row=0)
@@ -45,7 +43,6 @@ def tamad():
             counter += 1
 
     root.update()
-
 
 label = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
 
@@ -71,12 +68,9 @@ hajo_dict = {"A1": 0, "B1": 0, "C1": 0, "D1": 0, "E1": 0, "F1": 0, "G1": 0, "H1"
              "A9": 0, "B9": 0, "C9": 0, "D9": 0, "E9": 0, "F9": 0, "G9": 0, "H9": 0, "I9": 0, "J9": 0,
              "A10": 1, "B10": 1, "C10": 1, "D10": 1, "E10": 0, "F10": 0, "G10": 0, "H10": 0, "I10": 0, "J10": 0}
 
-
-
 palya = palya_generalas(palya_dict, hajo_dict)
 
 counter = 0
-
 
 root = Tk()
 root.title("Torpedo")
