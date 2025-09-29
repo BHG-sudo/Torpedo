@@ -7,4 +7,4 @@ Ezután nyomja meg a támadás gombot mellette.
 
 Követelmények a futtatáshoz:
   - Python 3
-  - Tkinter modul letöltése ( python install tkinter )
+  - Tkinter modul letöltése ( pip install tkinter )
