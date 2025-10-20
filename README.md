@@ -1,9 +1,16 @@
-Ez egy nagyon egyszerű program, ne várj semmi bonyolúltat.
+Ez egy nagyon egyszerű "videó játék".
 
 Hogyan kell játszani?
-Elindítja a programot és látni fog egy 10x10-es rubrikát.
-A rubrikátol jobb lentre lát egy dobozt, amibe írhat, kérem csak a celláknak az azonosítóját írja be Pl.:(A1, B5, K10) (ezek fel vannak tüntetve a rubrika körül, mást nem fogad el.)
-Ezután nyomja meg a támadás gombot mellette.
+Elindítja a programot és látni fog kettő 10x10-es rubrikát.
+A baloldali az ön térfele ami mutatja a hajóid poziccióit.
+A jobboldali az ellenfél térfelét mutatja amiben a cellákra kattintva tud támadni.
+
+A 0-ás karakter azt jelenti hogy az a cella nem lett még megtámadva.
+
+Az X karakter azt jelenti hogy az a cella meg lett támadva.
+
+A # karakter azt jelenti hogy eltalált egy hajó részt.
+
 
 Követelmények a futtatáshoz:
   - Python 3
